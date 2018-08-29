@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import SongContainer from './containers/SongContainer.js';
 import './App.css';
 import SpotifyWebApi from 'spotify-web-api-js';
 const spotifyApi = new SpotifyWebApi();
@@ -35,18 +36,31 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Spotif-API</h1>
+        </header>
+
         <a href='http://localhost:8888' > Login to Spotify </a>
+
         <div>
           Now Playing: { this.state.nowPlaying.name }
         </div>
+
         <div>
-          <img src={this.state.nowPlaying.albumArt} style={{ height: 150 }}/>
+          <img src={this.state.nowPlaying.albumArt} style={{ height: 300 }}/>
         </div>
         { this.state.loggedIn &&
           <button onClick={() => this.getNowPlaying()}>
             Check Now Playing
           </button>
         }
+
+        <div>
+          <SongContainer/>
+        </div>
+
       </div>
     );
   }
