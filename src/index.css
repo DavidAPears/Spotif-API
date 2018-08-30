@@ -1,5 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: 'Raleway', sans-serif;
+  background-image: url('https://www.pixelstalk.net/hd-minimalist-desktop-backgrounds/#/lightbox&slide=2');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+	}
